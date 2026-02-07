@@ -6,7 +6,7 @@
 /*   By: mshershe <mshershe@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 20:02:55 by mshershe          #+#    #+#             */
-/*   Updated: 2026/02/07 03:54:01 by mshershe         ###   ########.fr       */
+/*   Updated: 2026/02/07 04:02:16 by mshershe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,22 @@ FragTrap::~FragTrap()
 
 FragTrap::FragTrap(const FragTrap& instance) : ClapTrap(instance)
 {
+	this->name = instance.name;
+    this->Hitpoints = instance.Hitpoints;
+    this->energry_points = instance.energry_points;
+    this->attack_damage = instance.attack_damage;
 	std::cout<< this ->name <<" has been copied by calling the Copy Constructor of FragTrap" << std::endl;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& instance)
 {
 	if (this != &instance)
-		ClapTrap::operator=(instance);
+	{
+		this->name = instance.name;
+		this->Hitpoints = instance.Hitpoints;
+		this->energry_points = instance.energry_points;
+		this->attack_damage = instance.attack_damage;
+	}
 		
 	std::cout << "FragTrap " << this->name << " has been assigned using the Copy assignment operator !" << std::endl;
 	return (*this);

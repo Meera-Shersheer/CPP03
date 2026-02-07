@@ -6,14 +6,14 @@
 /*   By: mshershe <mshershe@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 01:24:04 by mshershe          #+#    #+#             */
-/*   Updated: 2026/02/07 03:44:03 by mshershe         ###   ########.fr       */
+/*   Updated: 2026/02/07 04:03:34 by mshershe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
 
-DiamondTrap::DiamondTrap():ClapTrap("DefaultName_clap_name"), ScavTrap("DefaultName"), FragTrap("DefaultName")
+DiamondTrap::DiamondTrap()
 {
 	this->name = "DefaultName";
 	this->Hitpoints = FragTrap::Hitpoints;
@@ -23,7 +23,7 @@ DiamondTrap::DiamondTrap():ClapTrap("DefaultName_clap_name"), ScavTrap("DefaultN
 
 }
 
-DiamondTrap::DiamondTrap(std::string name):ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name)
+DiamondTrap::DiamondTrap(std::string name)
 {
 	this->name = name;
 	this->Hitpoints = FragTrap::Hitpoints;
@@ -38,7 +38,7 @@ DiamondTrap::~DiamondTrap()
 
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap& instance): ClapTrap(instance), ScavTrap(instance), FragTrap(instance)
+DiamondTrap::DiamondTrap(const DiamondTrap& instance)  : ClapTrap(instance), ScavTrap(instance), FragTrap(instance)
 {
 	this->name = instance.name;
 	ClapTrap::name = instance.ClapTrap::name;

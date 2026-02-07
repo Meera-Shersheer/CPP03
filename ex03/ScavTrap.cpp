@@ -6,7 +6,7 @@
 /*   By: mshershe <mshershe@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 20:02:55 by mshershe          #+#    #+#             */
-/*   Updated: 2026/02/07 03:53:57 by mshershe         ###   ########.fr       */
+/*   Updated: 2026/02/07 04:01:53 by mshershe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,22 @@ ScavTrap::~ScavTrap()
 
 ScavTrap::ScavTrap(const ScavTrap& instance) : ClapTrap(instance)
 {
+	this->name = instance.name;
+    this->Hitpoints = instance.Hitpoints;
+    this->energry_points = instance.energry_points;
+    this->attack_damage = instance.attack_damage;
 	std::cout<< this ->name <<" has been copied by calling the Copy Constructor of ScavTrap" << std::endl;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& instance)
 {
 	if (this != &instance)
-		ClapTrap::operator=(instance);
+	{
+		this->name = instance.name;
+		this->Hitpoints = instance.Hitpoints;
+		this->energry_points = instance.energry_points;
+		this->attack_damage = instance.attack_damage;
+	}
 		
 	std::cout << "ScavTrap " << this->name << " has been assigned using the Copy assignment operator !" << std::endl;
 	return (*this);
