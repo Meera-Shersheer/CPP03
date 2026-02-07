@@ -6,7 +6,7 @@
 /*   By: mshershe <mshershe@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 20:02:55 by mshershe          #+#    #+#             */
-/*   Updated: 2026/02/07 01:27:53 by mshershe         ###   ########.fr       */
+/*   Updated: 2026/02/07 03:53:57 by mshershe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ ScavTrap::ScavTrap()
 	std::cout<< this->name <<" is created by calling the default Constructor of ScavTrap" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
+ScavTrap::ScavTrap(std::string name)
 {
+	this->name = name;
 	this->Hitpoints = 100;
 	this->energry_points = 50;
 	this->attack_damage = 20;

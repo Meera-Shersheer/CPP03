@@ -6,7 +6,7 @@
 /*   By: mshershe <mshershe@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 20:02:55 by mshershe          #+#    #+#             */
-/*   Updated: 2026/02/07 01:03:33 by mshershe         ###   ########.fr       */
+/*   Updated: 2026/02/07 03:54:01 by mshershe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ FragTrap::FragTrap()
 	std::cout<< this->name <<" is created by calling the default Constructor of FragTrap" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name)
+FragTrap::FragTrap(std::string name)
 {
+	this->name = name;
 	this->Hitpoints = 100;
 	this->energry_points = 100;
 	this->attack_damage = 30;
