@@ -6,15 +6,15 @@
 /*   By: mshershe <mshershe@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 20:02:55 by mshershe          #+#    #+#             */
-/*   Updated: 2026/02/08 13:54:42 by mshershe         ###   ########.fr       */
+/*   Updated: 2026/02/08 14:33:55 by mshershe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-static const unsigned int _Hitpoints = 100;
-static const unsigned int _energry_points = 100;
-static const unsigned int _attack_damage_= 30;
+unsigned int _Hitpoints = 100;
+unsigned int _energry_points = 100;
+unsigned int _attack_damage_= 30;
 	
 FragTrap::FragTrap()
 {

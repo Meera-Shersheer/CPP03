@@ -6,7 +6,7 @@
 /*   By: mshershe <mshershe@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 01:24:04 by mshershe          #+#    #+#             */
-/*   Updated: 2026/02/08 13:57:13 by mshershe         ###   ########.fr       */
+/*   Updated: 2026/02/08 14:35:20 by mshershe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@
 DiamondTrap::DiamondTrap()
 {
 
-	
 	this->name = "DefaultName";
-	this->Hitpoints = _Hitpoints;
-	this->energry_points = _energry_points_;
-	this->attack_damage = _attack_damage;
+	this->Hitpoints =  FragTrap::_Hitpoints;
+	this->energry_points = ScavTrap::_energry_points_;
+	this->attack_damage =  FragTrap::_attack_damage;
 	std::cout<< this->name <<" is created by calling the default Constructor of DiamondTrap" << std::endl;
 
 }
@@ -28,9 +27,9 @@ DiamondTrap::DiamondTrap()
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name)
 {	
 	this->name = name;
-	this->Hitpoints =  _Hitpoints;
-	this->energry_points = _energry_points_;
-	this->attack_damage =  _attack_damage;
+	this->Hitpoints =   FragTrap::_Hitpoints;
+	this->energry_points = ScavTrap::_energry_points_;
+	this->attack_damage =  FragTrap::_attack_damage;
 	std::cout<< this->name <<" is created by calling the Parameterized  Constructor of DiamondTrap" << std::endl;
 }
 
