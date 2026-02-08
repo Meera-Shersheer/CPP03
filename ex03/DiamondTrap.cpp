@@ -6,7 +6,7 @@
 /*   By: mshershe <mshershe@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 01:24:04 by mshershe          #+#    #+#             */
-/*   Updated: 2026/02/07 04:15:44 by mshershe         ###   ########.fr       */
+/*   Updated: 2026/02/08 13:57:13 by mshershe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,22 @@
 
 DiamondTrap::DiamondTrap()
 {
-	ScavTrap tempScav;
-    FragTrap tempFrag;
+
 	
 	this->name = "DefaultName";
-	this->Hitpoints = tempFrag.getHitPoints();
-	this->energry_points = tempScav.getEnergyPoints();
-	this->attack_damage = tempFrag.getAttackDamage();
+	this->Hitpoints = _Hitpoints;
+	this->energry_points = _energry_points_;
+	this->attack_damage = _attack_damage;
 	std::cout<< this->name <<" is created by calling the default Constructor of DiamondTrap" << std::endl;
 
 }
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name)
-{
-	ScavTrap tempScav;
-    FragTrap tempFrag;
-	
+{	
 	this->name = name;
-	this->Hitpoints = tempFrag.getHitPoints();
-	this->energry_points = tempScav.getEnergyPoints();
-	this->attack_damage = tempFrag.getAttackDamage();
+	this->Hitpoints =  _Hitpoints;
+	this->energry_points = _energry_points_;
+	this->attack_damage =  _attack_damage;
 	std::cout<< this->name <<" is created by calling the Parameterized  Constructor of DiamondTrap" << std::endl;
 }
 
@@ -48,9 +44,9 @@ DiamondTrap::DiamondTrap(const DiamondTrap& instance)  : ClapTrap(instance), Sca
 {
 	this->name = instance.name;
 	ClapTrap::name = instance.ClapTrap::name;
-	this->Hitpoints = instance.FragTrap::Hitpoints;
-	this->energry_points = instance.ScavTrap::energry_points;
-	this->attack_damage = instance.FragTrap::attack_damage;
+	this->Hitpoints = instance.Hitpoints;
+	this->energry_points = instance.energry_points;
+	this->attack_damage = instance.attack_damage;
 	std::cout<< this->name <<" has been copied by calling the Copy Constructor of DiamondTrap" << std::endl;
 }
 
@@ -60,9 +56,9 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& instance)
 	{
 		this->name = instance.name;
 		ClapTrap::name = instance.ClapTrap::name;
-		this->Hitpoints = instance.FragTrap::Hitpoints;
-		this->energry_points = instance.ScavTrap::energry_points;
-		this->attack_damage = instance.FragTrap::attack_damage;
+		this->Hitpoints = instance.Hitpoints;
+		this->energry_points = instance.energry_points;
+		this->attack_damage = instance.attack_damage;
 	}	
 	std::cout << "DiamondTrap " << this->name << " has been assigned using the Copy assignment operator !" << std::endl;
 	return (*this);
