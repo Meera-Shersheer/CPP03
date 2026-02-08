@@ -6,15 +6,15 @@
 /*   By: mshershe <mshershe@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 20:02:55 by mshershe          #+#    #+#             */
-/*   Updated: 2026/02/08 14:37:18 by mshershe         ###   ########.fr       */
+/*   Updated: 2026/02/08 14:40:12 by mshershe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-	static const unsigned int _Hitpoints_ = 100;
-	static const unsigned int _energry_points_ = 50;
-	static const unsigned int _attack_damage_ = 20;
+	const unsigned int ScavTrap::_Hitpoints_ = 100;
+	const unsigned int  ScavTrap::_energry_points_ = 50;
+	const unsigned int  ScavTrap::_attack_damage_ = 20;
 
 ScavTrap::ScavTrap()
 {
